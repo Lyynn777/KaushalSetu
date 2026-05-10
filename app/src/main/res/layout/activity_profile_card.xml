@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" android:orientation="horizontal"
+        android:gravity="center_vertical" android:padding="12dp">
+      <ImageButton android:id="@+id/btnBack" android:layout_width="36dp" android:layout_height="36dp"
+          android:src="@android:drawable/ic_menu_revert"
+          android:background="?attr/selectableItemBackgroundBorderless" android:layout_marginEnd="8dp"/>
+      <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+          android:text="@string/profile_card_title" android:textColor="@color/white"
+          android:textSize="18sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:text="@string/profile_card_subtitle"
+        android:textColor="@color/colorTextSecondary" android:textSize="13sp"
+        android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+
+    <!-- THE CARD — rendered to bitmap on share -->
+    <androidx.cardview.widget.CardView android:id="@+id/profileCardView"
+        android:layout_width="320dp" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:layout_margin="16dp"
+        app:cardCornerRadius="16dp" app:cardElevation="8dp">
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <!-- Card header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/colorPrimary" android:gravity="center"
+            android:orientation="vertical" android:paddingTop="24dp" android:paddingBottom="20dp"
+            android:paddingStart="16dp" android:paddingEnd="16dp">
+          <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/cardAvatar"
+              android:layout_width="80dp" android:layout_height="80dp"
+              android:src="@drawable/ic_person_placeholder"
+              app:civ_border_color="@color/white" app:civ_border_width="3dp"/>
+          <TextView android:id="@+id/cardName" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:text="Name"
+              android:textColor="@color/white" android:textSize="20sp" android:textStyle="bold"
+              android:layout_marginTop="10dp"/>
+          <TextView android:id="@+id/cardSkill" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:text="Skill"
+              android:textColor="#CCFFFFFF" android:textSize="14sp"/>
+          <TextView android:id="@+id/cardAvailability" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:text="Available"
+              android:textColor="@color/colorAvailable" android:textSize="12sp" android:textStyle="bold"
+              android:layout_marginTop="6dp" android:background="@drawable/bg_available"
+              android:paddingStart="10dp" android:paddingEnd="10dp"
+              android:paddingTop="3dp" android:paddingBottom="3dp"/>
+        </LinearLayout>
+
+        <!-- Card body -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/colorSurface" android:orientation="vertical"
+            android:padding="16dp">
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <TextView android:id="@+id/cardLocation" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="📍 Location" android:textColor="@color/colorTextSecondary"
+                android:textSize="13sp"/>
+            <TextView android:id="@+id/cardExp" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0 yrs exp"
+                android:textColor="@color/colorPrimary" android:textSize="13sp" android:textStyle="bold"/>
+          </LinearLayout>
+          <View android:layout_width="match_parent" android:layout_height="1dp"
+              android:background="@color/colorDivider" android:layout_marginBottom="10dp"/>
+          <TextView android:id="@+id/cardRating" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:text="★ 0.0"
+              android:textColor="@color/colorAccent" android:textSize="14sp" android:textStyle="bold"
+              android:layout_marginBottom="8dp"/>
+          <TextView android:id="@+id/cardPhone" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:text="📞 Phone"
+              android:textColor="@color/colorPrimary" android:textSize="15sp" android:textStyle="bold"
+              android:layout_marginBottom="10dp"/>
+          <View android:layout_width="match_parent" android:layout_height="1dp"
+              android:background="@color/colorDivider" android:layout_marginBottom="10dp"/>
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:gravity="center" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔧 " android:textSize="13sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="KaushalSetu" android:textColor="@color/colorPrimary"
+                android:textSize="13sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="  •  ಕೌಶಲ್ ಸೇತು" android:textColor="@color/colorTextSecondary"
+                android:textSize="11sp"/>
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Action buttons -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnShareWhatsApp"
+          android:layout_width="match_parent" android:layout_height="52dp"
+          android:text="@string/btn_share_whatsapp" android:textSize="15sp" android:textStyle="bold"
+          android:backgroundTint="#25D366" app:cornerRadius="10dp" android:layout_marginBottom="10dp"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnShareOther"
+          style="@style/SetuButton" android:layout_width="match_parent" android:layout_height="52dp"
+          android:text="@string/btn_share_other" android:textSize="15sp"
+          app:cornerRadius="10dp" android:layout_marginBottom="10dp"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveGallery"
+          style="@style/SetuButtonOutlined" android:layout_width="match_parent"
+          android:layout_height="52dp" android:text="@string/btn_save_gallery"
+          android:textSize="15sp" app:cornerRadius="10dp" android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+
+  </LinearLayout>
+</ScrollView>

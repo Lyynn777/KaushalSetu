@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KaushalSetu</string>
+    <string name="app_tagline">Bridging Skills with Opportunities</string>
+
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_subtitle">Login to your account</string>
+    <string name="create_account">Create Account</string>
+    <string name="register_subtitle">Join KaushalSetu today</string>
+    <string name="no_account">Don\'t have an account? </string>
+    <string name="have_account">Already have an account? </string>
+    <string name="i_am_a">I am a:</string>
+    <string name="role_worker">🔧 Skilled Worker</string>
+    <string name="role_customer">🏠 Customer</string>
+    <string name="btn_create_account">CREATE ACCOUNT</string>
+    <string name="btn_login">LOGIN</string>
+
+    <!-- Validation -->
+    <string name="error_required">This field is required</string>
+    <string name="error_email_invalid">Enter a valid email</string>
+    <string name="error_password_short">Minimum 6 characters</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+
+    <!-- Worker Dashboard -->
+    <string name="my_dashboard">My Dashboard</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="my_services">My Services</string>
+    <string name="add_service">+ Add Service</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="add_photo">+ Add Photo</string>
+    <string name="hire_requests">Hire Requests</string>
+    <string name="share_profile_card">🪪 Share My Profile Card</string>
+    <string name="no_services_yet">No services added yet.\nTap \'+ Add Service\' to start.</string>
+    <string name="no_requests_yet">No hire requests yet</string>
+    <string name="pending_count">%d pending</string>
+    <string name="photos_count">%d photos</string>
+    <string name="years_exp">%d yrs exp</string>
+    <string name="status_available">Available</string>
+    <string name="status_busy">Busy</string>
+    <string name="available_for_work">Available for work</string>
+
+    <!-- Profile Setup -->
+    <string name="worker_profile">Worker Profile</string>
+    <string name="tap_photo">Tap to change photo</string>
+    <string name="skill_category">Skill Category</string>
+    <string name="years_experience">Years of Experience</string>
+    <string name="location">Location (e.g. Bengaluru, Koramangala)</string>
+    <string name="bio">Short Bio (Optional)</string>
+    <string name="save_profile">Save Profile</string>
+
+    <!-- Add Service -->
+    <string name="add_service_title">Add New Service</string>
+    <string name="service_name">Service Name (e.g. Fan Repair)</string>
+    <string name="service_price">Price (e.g. 300 or 300–600)</string>
+    <string name="service_description">Service Description</string>
+    <string name="ai_title">🤖 AI Description Generator</string>
+    <string name="experience_for_ai">Your years of experience</string>
+    <string name="btn_generate_ai">✨ Generate with AI</string>
+    <string name="btn_add_service">Add Service</string>
+    <string name="service_available">Service available</string>
+
+    <!-- Customer Dashboard -->
+    <string name="find_workers">Find Skilled Workers</string>
+    <string name="search_hint">🔍  Search workers…</string>
+    <string name="workers_found">%d workers found</string>
+    <string name="no_workers_found">No workers found</string>
+    <string name="cat_all">All</string>
+    <string name="cat_electrician">⚡ Electrician</string>
+    <string name="cat_plumber">🔧 Plumber</string>
+    <string name="cat_carpenter">🪚 Carpenter</string>
+    <string name="cat_painter">🖌️ Painter</string>
+    <string name="cat_mechanic">🚗 Mechanic</string>
+
+    <!-- Search -->
+    <string name="search_workers">Search Workers</string>
+    <string name="search_location_hint">Location (e.g. HSR Layout)</string>
+    <string name="btn_search">Search</string>
+    <string name="search_prompt">Select a category or enter location to search</string>
+
+    <!-- Worker Detail -->
+    <string name="worker_profile_title">Worker Profile</string>
+    <string name="about">About</string>
+    <string name="no_bio">No bio added yet</string>
+    <string name="services_offered">Services Offered</string>
+    <string name="no_services_listed">No services listed yet</string>
+    <string name="reviews">Customer Reviews</string>
+    <string name="no_reviews">No reviews yet. Be the first!</string>
+    <string name="portfolio_count">%d portfolio photos</string>
+    <string name="btn_hire_me">📋 Hire Me</string>
+    <string name="btn_write_review">⭐ Write Review</string>
+    <string name="hire_form_title">Send Hire Request</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_phone">Your Phone</string>
+    <string name="service_needed">Service Needed (Optional)</string>
+    <string name="message_optional">Message (Optional)</string>
+    <string name="btn_send_request">Send Request</string>
+    <string name="review_form_title">Write a Review</string>
+    <string name="your_comment">Your comment (Optional)</string>
+    <string name="btn_submit_review">Submit Review</string>
+
+    <!-- Hire request item -->
+    <string name="status_pending">Pending</string>
+    <string name="status_accepted">Accepted</string>
+    <string name="status_rejected">Rejected</string>
+    <string name="btn_accept">✓ Accept</string>
+    <string name="btn_reject">✗ Reject</string>
+
+    <!-- Profile Card -->
+    <string name="profile_card_title">My Profile Card</string>
+    <string name="profile_card_subtitle">Preview your shareable card</string>
+    <string name="btn_share_whatsapp">📲 Share on WhatsApp</string>
+    <string name="btn_share_other">↗ Share via Other Apps</string>
+    <string name="btn_save_gallery">⬇ Save to Gallery</string>
+    <string name="card_saved">Card saved to Gallery!</string>
+
+    <!-- Language Settings -->
+    <string name="language_settings">Language / ಭಾಷೆ</string>
+    <string name="choose_language">Choose your language\nಭಾಷೆ ಆಯ್ಕೆ ಮಾಡಿ</string>
+    <string name="lang_english">English</string>
+    <string name="lang_kannada">ಕನ್ನಡ</string>
+    <string name="lang_switch_en">Switch to English</string>
+    <string name="lang_switch_kn">ಕನ್ನಡಕ್ಕೆ ಬದಲಿಸಿ</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="logout_confirm_title">Logout</string>
+    <string name="logout_confirm_msg">Are you sure you want to logout?</string>
+    <string name="delete_service_title">Delete Service</string>
+    <string name="delete_service_msg">Are you sure you want to delete this service?</string>
+    <string name="lang_toggle">ಕ/A</string>
+
+    <!-- Skill categories array -->
+    <string-array name="skill_categories">
+        <item>Electrician</item>
+        <item>Plumber</item>
+        <item>Carpenter</item>
+        <item>Painter</item>
+        <item>Mechanic</item>
+        <item>Mason</item>
+        <item>Welder</item>
+        <item>AC Technician</item>
+        <item>Gardener</item>
+        <item>Other</item>
+    </string-array>
+</resources>

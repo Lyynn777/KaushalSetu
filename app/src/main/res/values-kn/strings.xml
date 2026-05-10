@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಕೌಶಲ್ ಸೇತು</string>
+    <string name="app_tagline">ಕೌಶಲ್ಯ ಮತ್ತು ಅವಕಾಶಗಳ ಸೇತುವೆ</string>
+
+    <!-- Auth -->
+    <string name="login">ಲಾಗಿನ್</string>
+    <string name="register">ನೋಂದಾಯಿಸಿ</string>
+    <string name="logout">ಲಾಗ್‌ಔಟ್</string>
+    <string name="email">ಇಮೇಲ್ ವಿಳಾಸ</string>
+    <string name="password">ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="confirm_password">ಪಾಸ್‌ವರ್ಡ್ ದೃಢಪಡಿಸಿ</string>
+    <string name="full_name">ಪೂರ್ಣ ಹೆಸರು</string>
+    <string name="phone_number">ಫೋನ್ ಸಂಖ್ಯೆ</string>
+    <string name="welcome_back">ಮರಳಿ ಸ್ವಾಗತ</string>
+    <string name="login_subtitle">ನಿಮ್ಮ ಖಾತೆಗೆ ಲಾಗಿನ್ ಮಾಡಿ</string>
+    <string name="create_account">ಖಾತೆ ತೆರೆಯಿರಿ</string>
+    <string name="register_subtitle">ಇಂದು ಕೌಶಲ್ ಸೇತುವಿಗೆ ಸೇರಿ</string>
+    <string name="no_account">ಖಾತೆ ಇಲ್ಲವೇ? </string>
+    <string name="have_account">ಈಗಾಗಲೇ ಖಾತೆ ಇದೆಯೇ? </string>
+    <string name="i_am_a">ನಾನು:</string>
+    <string name="role_worker">🔧 ಕುಶಲಕರ್ಮಿ</string>
+    <string name="role_customer">🏠 ಗ್ರಾಹಕ</string>
+    <string name="btn_create_account">ಖಾತೆ ತೆರೆಯಿರಿ</string>
+    <string name="btn_login">ಲಾಗಿನ್</string>
+
+    <!-- Validation -->
+    <string name="error_required">ಈ ಮಾಹಿತಿ ಅಗತ್ಯ</string>
+    <string name="error_email_invalid">ಸರಿಯಾದ ಇಮೇಲ್ ನಮೂದಿಸಿ</string>
+    <string name="error_password_short">ಕನಿಷ್ಠ 6 ಅಕ್ಷರಗಳು</string>
+    <string name="error_password_mismatch">ಪಾಸ್‌ವರ್ಡ್ ಹೊಂದಾಣಿಕೆಯಾಗುತ್ತಿಲ್ಲ</string>
+
+    <!-- Worker Dashboard -->
+    <string name="my_dashboard">ನನ್ನ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್</string>
+    <string name="edit_profile">ತಿದ್ದು</string>
+    <string name="my_services">ನನ್ನ ಸೇವೆಗಳು</string>
+    <string name="add_service">+ ಸೇವೆ ಸೇರಿಸಿ</string>
+    <string name="portfolio">ಪೋರ್ಟ್‌ಫೋಲಿಯೋ</string>
+    <string name="add_photo">+ ಫೋಟೋ ಸೇರಿಸಿ</string>
+    <string name="hire_requests">ನೇಮಕ ವಿನಂತಿಗಳು</string>
+    <string name="share_profile_card">🪪 ಪ್ರೊಫೈಲ್ ಕಾರ್ಡ್ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="no_services_yet">ಇನ್ನೂ ಸೇವೆಗಳಿಲ್ಲ.\n\'+ ಸೇವೆ ಸೇರಿಸಿ\' ಒತ್ತಿರಿ.</string>
+    <string name="no_requests_yet">ಇನ್ನೂ ನೇಮಕ ವಿನಂತಿಗಳಿಲ್ಲ</string>
+    <string name="pending_count">%d ಬಾಕಿ</string>
+    <string name="photos_count">%d ಫೋಟೋಗಳು</string>
+    <string name="years_exp">%d ವರ್ಷ ಅನುಭವ</string>
+    <string name="status_available">ಲಭ್ಯವಿದೆ</string>
+    <string name="status_busy">ಕೆಲಸದಲ್ಲಿದ್ದೇನೆ</string>
+    <string name="available_for_work">ಕೆಲಸಕ್ಕೆ ಲಭ್ಯ</string>
+
+    <!-- Profile Setup -->
+    <string name="worker_profile">ಕುಶಲಕರ್ಮಿ ಪ್ರೊಫೈಲ್</string>
+    <string name="tap_photo">ಫೋಟೋ ಬದಲಿಸಲು ಒತ್ತಿರಿ</string>
+    <string name="skill_category">ಕೌಶಲ್ಯ ವಿಭಾಗ</string>
+    <string name="years_experience">ಅನುಭವದ ವರ್ಷಗಳು</string>
+    <string name="location">ಸ್ಥಳ (ಉದಾ: ಬೆಂಗಳೂರು, ಕೋರಮಂಗಲ)</string>
+    <string name="bio">ಸಣ್ಣ ಪರಿಚಯ (ಐಚ್ಛಿಕ)</string>
+    <string name="save_profile">ಪ್ರೊಫೈಲ್ ಉಳಿಸಿ</string>
+
+    <!-- Add Service -->
+    <string name="add_service_title">ಹೊಸ ಸೇವೆ ಸೇರಿಸಿ</string>
+    <string name="service_name">ಸೇವೆಯ ಹೆಸರು (ಉದಾ: ಫ್ಯಾನ್ ರಿಪೇರಿ)</string>
+    <string name="service_price">ಬೆಲೆ (ಉದಾ: 300 ಅಥವಾ 300–600)</string>
+    <string name="service_description">ಸೇವೆಯ ವಿವರಣೆ</string>
+    <string name="ai_title">🤖 AI ವಿವರಣೆ ಜನರೇಟರ್</string>
+    <string name="experience_for_ai">ನಿಮ್ಮ ಅನುಭವದ ವರ್ಷಗಳು</string>
+    <string name="btn_generate_ai">✨ AI ಯಿಂದ ರಚಿಸಿ</string>
+    <string name="btn_add_service">ಸೇವೆ ಸೇರಿಸಿ</string>
+    <string name="service_available">ಸೇವೆ ಲಭ್ಯವಿದೆ</string>
+
+    <!-- Customer Dashboard -->
+    <string name="find_workers">ಕುಶಲಕರ್ಮಿಗಳನ್ನು ಹುಡುಕಿ</string>
+    <string name="search_hint">🔍  ಕುಶಲಕರ್ಮಿಗಳನ್ನು ಹುಡುಕಿ…</string>
+    <string name="workers_found">%d ಕುಶಲಕರ್ಮಿಗಳು</string>
+    <string name="no_workers_found">ಯಾರೂ ಕಂಡುಬಂದಿಲ್ಲ</string>
+    <string name="cat_all">ಎಲ್ಲಾ</string>
+    <string name="cat_electrician">⚡ ವಿದ್ಯುತ್ ತಜ್ಞ</string>
+    <string name="cat_plumber">🔧 ಪ್ಲಂಬರ್</string>
+    <string name="cat_carpenter">🪚 ಬಡಗಿ</string>
+    <string name="cat_painter">🖌️ ಚಿತ್ರಕಾರ</string>
+    <string name="cat_mechanic">🚗 ಮೆಕ್ಯಾನಿಕ್</string>
+
+    <!-- Search -->
+    <string name="search_workers">ಕುಶಲಕರ್ಮಿಗಳನ್ನು ಹುಡುಕಿ</string>
+    <string name="search_location_hint">ಸ್ಥಳ (ಉದಾ: HSR ಲೇಔಟ್)</string>
+    <string name="btn_search">ಹುಡುಕಿ</string>
+    <string name="search_prompt">ವಿಭಾಗ ಆಯ್ಕೆ ಮಾಡಿ ಅಥವಾ ಸ್ಥಳ ನಮೂದಿಸಿ</string>
+
+    <!-- Worker Detail -->
+    <string name="worker_profile_title">ಕುಶಲಕರ್ಮಿ ಪ್ರೊಫೈಲ್</string>
+    <string name="about">ಪರಿಚಯ</string>
+    <string name="no_bio">ಪರಿಚಯ ಇನ್ನೂ ಸೇರಿಸಿಲ್ಲ</string>
+    <string name="services_offered">ನೀಡುವ ಸೇವೆಗಳು</string>
+    <string name="no_services_listed">ಇನ್ನೂ ಸೇವೆಗಳಿಲ್ಲ</string>
+    <string name="reviews">ಗ್ರಾಹಕರ ವಿಮರ್ಶೆಗಳು</string>
+    <string name="no_reviews">ಇನ್ನೂ ವಿಮರ್ಶೆಗಳಿಲ್ಲ. ಮೊದಲು ಬರೆಯಿರಿ!</string>
+    <string name="portfolio_count">%d ಪೋರ್ಟ್‌ಫೋಲಿಯೋ ಫೋಟೋಗಳು</string>
+    <string name="btn_hire_me">📋 ನನ್ನನ್ನು ನೇಮಿಸಿ</string>
+    <string name="btn_write_review">⭐ ವಿಮರ್ಶೆ ಬರೆಯಿರಿ</string>
+    <string name="hire_form_title">ನೇಮಕ ವಿನಂತಿ ಕಳುಹಿಸಿ</string>
+    <string name="your_name">ನಿಮ್ಮ ಹೆಸರು</string>
+    <string name="your_phone">ನಿಮ್ಮ ಫೋನ್</string>
+    <string name="service_needed">ಬೇಕಾದ ಸೇವೆ (ಐಚ್ಛಿಕ)</string>
+    <string name="message_optional">ಸಂದೇಶ (ಐಚ್ಛಿಕ)</string>
+    <string name="btn_send_request">ವಿನಂತಿ ಕಳುಹಿಸಿ</string>
+    <string name="review_form_title">ವಿಮರ್ಶೆ ಬರೆಯಿರಿ</string>
+    <string name="your_comment">ನಿಮ್ಮ ಅಭಿಪ್ರಾಯ (ಐಚ್ಛಿಕ)</string>
+    <string name="btn_submit_review">ವಿಮರ್ಶೆ ಸಲ್ಲಿಸಿ</string>
+
+    <!-- Hire request item -->
+    <string name="status_pending">ಬಾಕಿ</string>
+    <string name="status_accepted">ಒಪ್ಪಿಗೆ</string>
+    <string name="status_rejected">ತಿರಸ್ಕಾರ</string>
+    <string name="btn_accept">✓ ಒಪ್ಪಿಗೆ</string>
+    <string name="btn_reject">✗ ತಿರಸ್ಕರಿಸಿ</string>
+
+    <!-- Profile Card -->
+    <string name="profile_card_title">ನನ್ನ ಪ್ರೊಫೈಲ್ ಕಾರ್ಡ್</string>
+    <string name="profile_card_subtitle">ನಿಮ್ಮ ಕಾರ್ಡ್ ಮೇಲ್ನೋಟ ನೋಡಿ</string>
+    <string name="btn_share_whatsapp">📲 WhatsApp ನಲ್ಲಿ ಹಂಚಿ</string>
+    <string name="btn_share_other">↗ ಇತರ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಲ್ಲಿ</string>
+    <string name="btn_save_gallery">⬇ ಗ್ಯಾಲರಿಗೆ ಉಳಿಸಿ</string>
+    <string name="card_saved">ಕಾರ್ಡ್ ಗ್ಯಾಲರಿಗೆ ಉಳಿಸಲಾಗಿದೆ!</string>
+
+    <!-- Language Settings -->
+    <string name="language_settings">Language / ಭಾಷೆ</string>
+    <string name="choose_language">Choose your language\nಭಾಷೆ ಆಯ್ಕೆ ಮಾಡಿ</string>
+    <string name="lang_english">English</string>
+    <string name="lang_kannada">ಕನ್ನಡ</string>
+    <string name="lang_switch_en">Switch to English</string>
+    <string name="lang_switch_kn">ಕನ್ನಡಕ್ಕೆ ಬದಲಿಸಿ</string>
+
+    <!-- Common -->
+    <string name="back">ಹಿಂದೆ</string>
+    <string name="cancel">ರದ್ದು</string>
+    <string name="delete">ಅಳಿಸಿ</string>
+    <string name="yes">ಹೌದು</string>
+    <string name="logout_confirm_title">ಲಾಗ್‌ಔಟ್</string>
+    <string name="logout_confirm_msg">ನೀವು ಖಂಡಿತ ಲಾಗ್‌ಔಟ್ ಮಾಡಲು ಬಯಸುವಿರಾ?</string>
+    <string name="delete_service_title">ಸೇವೆ ಅಳಿಸಿ</string>
+    <string name="delete_service_msg">ಈ ಸೇವೆಯನ್ನು ಅಳಿಸಲು ಬಯಸುವಿರಾ?</string>
+    <string name="lang_toggle">ಕ/A</string>
+
+    <string-array name="skill_categories">
+        <item>ವಿದ್ಯುತ್ ತಜ್ಞ (Electrician)</item>
+        <item>ಪ್ಲಂಬರ್ (Plumber)</item>
+        <item>ಬಡಗಿ (Carpenter)</item>
+        <item>ಚಿತ್ರಕಾರ (Painter)</item>
+        <item>ಮೆಕ್ಯಾನಿಕ್ (Mechanic)</item>
+        <item>ರಾಜಗಾರ (Mason)</item>
+        <item>ವೆಲ್ಡರ್ (Welder)</item>
+        <item>AC ತಂತ್ರಜ್ಞ (AC Technician)</item>
+        <item>ತೋಟಗಾರ (Gardener)</item>
+        <item>ಇತರೆ (Other)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp" app:cardCornerRadius="10dp" app:cardElevation="1dp"
+    app:strokeColor="@color/colorCardBorder" app:strokeWidth="0.5dp">
+
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical" android:padding="14dp"
+      android:background="@color/colorSurface">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+      <TextView android:id="@+id/tvName" android:layout_width="0dp"
+          android:layout_height="wrap_content" android:layout_weight="1"
+          android:text="Service Name" android:textColor="@color/colorTextPrimary"
+          android:textSize="14sp" android:textStyle="bold"/>
+      <TextView android:id="@+id/tvPrice" android:layout_width="wrap_content"
+          android:layout_height="wrap_content" android:text="₹300"
+          android:textColor="@color/colorPrimary" android:textSize="14sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvDescription" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Description"
+        android:textColor="@color/colorTextSecondary" android:textSize="13sp"
+        android:lineSpacingExtra="3dp" android:layout_marginBottom="8dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+      <TextView android:id="@+id/tvAvailability" android:layout_width="0dp"
+          android:layout_height="wrap_content" android:layout_weight="1"
+          android:text="Available" android:textColor="@color/colorAvailable" android:textSize="12sp"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnDelete"
+          style="@style/Widget.MaterialComponents.Button.TextButton"
+          android:layout_width="wrap_content" android:layout_height="32dp"
+          android:text="@string/delete" android:textColor="@color/colorError"
+          android:textSize="12sp" android:visibility="gone"/>
+    </LinearLayout>
+  </LinearLayout>
+</androidx.cardview.widget.CardView>

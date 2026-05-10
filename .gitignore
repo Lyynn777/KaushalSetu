@@ -1,0 +1,37 @@
+# Built output
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Firebase — NEVER commit this
+google-services.json
+
+# Android build output
+app/build/
+build/
+
+# Gradle wrapper jar (not needed in repo)
+gradle/wrapper/gradle-wrapper.jar
+
+# Kotlin / Java
+*.class
+*.jar
+*.aar
+
+# Signing keys — NEVER commit
+*.jks
+*.keystore
+
+# IDE
+*.swp
+*.swo
+.idea/
+*.iws
+out/

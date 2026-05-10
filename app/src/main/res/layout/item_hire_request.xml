@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+    app:strokeColor="@color/colorCardBorder" app:strokeWidth="0.5dp">
+
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical" android:padding="14dp"
+      android:background="@color/colorSurface">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+      <TextView android:id="@+id/tvName" android:layout_width="0dp"
+          android:layout_height="wrap_content" android:layout_weight="1"
+          android:text="Customer Name" android:textColor="@color/colorTextPrimary"
+          android:textSize="14sp" android:textStyle="bold"/>
+      <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content"
+          android:layout_height="wrap_content" android:text="Pending"
+          android:textColor="@color/colorPending" android:textSize="11sp" android:textStyle="bold"
+          android:background="@drawable/bg_pending" android:paddingStart="8dp"
+          android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvPhone" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="📞 Phone"
+        android:textColor="@color/colorPrimary" android:textSize="13sp"
+        android:layout_marginBottom="2dp"/>
+    <TextView android:id="@+id/tvService" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Service"
+        android:textColor="@color/colorTextSecondary" android:textSize="13sp"
+        android:layout_marginBottom="2dp"/>
+    <TextView android:id="@+id/tvMessage" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Message"
+        android:textColor="@color/colorTextSecondary" android:textSize="12sp"
+        android:layout_marginBottom="4dp"/>
+    <TextView android:id="@+id/tvDate" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Date"
+        android:textColor="@color/colorTextSecondary" android:textSize="11sp"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnAccept"
+          android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+          android:text="@string/btn_accept" android:textSize="13sp"
+          android:backgroundTint="@color/colorAvailable" app:cornerRadius="6dp"
+          android:layout_marginEnd="8dp"/>
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnReject"
+          android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1"
+          android:text="@string/btn_reject" android:textSize="13sp"
+          android:backgroundTint="@color/colorBusy" app:cornerRadius="6dp"/>
+    </LinearLayout>
+  </LinearLayout>
+</androidx.cardview.widget.CardView>

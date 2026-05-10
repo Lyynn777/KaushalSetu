@@ -1,0 +1,3 @@
+-keep class com.kaushal.setu.data.model.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary: Deep Forest Green -->
+    <color name="colorPrimary">#1B5E3B</color>
+    <color name="colorPrimaryDark">#0D3D24</color>
+    <color name="colorPrimaryLight">#2E7D52</color>
+
+    <!-- Accent: Warm Amber -->
+    <color name="colorAccent">#F4A024</color>
+    <color name="colorAccentDark">#C47D10</color>
+
+    <!-- Backgrounds -->
+    <color name="colorBackground">#F2F5F0</color>
+    <color name="colorSurface">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="colorTextPrimary">#1A2E1F</color>
+    <color name="colorTextSecondary">#4A6741</color>
+    <color name="colorTextHint">#7A9B74</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnAccent">#1A2E1F</color>
+
+    <!-- Status -->
+    <color name="colorAvailable">#2E7D32</color>
+    <color name="colorAvailableBg">#E8F5E9</color>
+    <color name="colorBusy">#C62828</color>
+    <color name="colorBusyBg">#FFEBEE</color>
+    <color name="colorPending">#E65100</color>
+    <color name="colorPendingBg">#FFF3E0</color>
+    <color name="colorError">#C62828</color>
+
+    <!-- UI elements -->
+    <color name="colorDivider">#D4E0CE</color>
+    <color name="colorInputStroke">#A5C09E</color>
+    <color name="colorStarRating">#F4A024</color>
+    <color name="colorCardBorder">#DCE8D8</color>
+
+    <!-- Utility -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1A2E1F</color>
+    <color name="transparent">#00000000</color>
+</resources>

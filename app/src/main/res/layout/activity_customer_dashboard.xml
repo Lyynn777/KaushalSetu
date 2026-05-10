@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+  <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+      android:orientation="vertical" android:background="@color/colorBackground">
+
+    <!-- App bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" android:orientation="vertical" android:padding="14dp">
+
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+          android:orientation="horizontal" android:gravity="center_vertical"
+          android:layout_marginBottom="10dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/app_name" android:textColor="@color/white"
+              android:textSize="18sp" android:textStyle="bold"/>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/find_workers" android:textColor="#CCFFFFFF" android:textSize="12sp"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnLanguage"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="32dp"
+            android:text="@string/lang_toggle" android:textColor="@color/white"
+            android:textSize="12sp" android:textStyle="bold"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="32dp"
+            android:text="@string/logout" android:textColor="#CCFFFFFF" android:textSize="12sp"/>
+      </LinearLayout>
+
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnSearch"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+          android:layout_width="match_parent" android:layout_height="44dp"
+          android:text="@string/search_hint" android:textColor="@color/white"
+          app:strokeColor="@color/white" app:cornerRadius="22dp"
+          android:gravity="start|center_vertical" android:paddingStart="16dp"/>
+    </LinearLayout>
+
+    <!-- Category chips -->
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:scrollbars="none" android:background="@color/colorSurface"
+        android:paddingTop="8dp" android:paddingBottom="8dp">
+      <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:orientation="horizontal" android:paddingStart="12dp" android:paddingEnd="12dp">
+        <com.google.android.material.chip.Chip android:id="@+id/chipAll"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/cat_all" android:textColor="@color/white"
+            android:layout_marginEnd="6dp" app:chipBackgroundColor="@color/colorPrimary"/>
+        <com.google.android.material.chip.Chip android:id="@+id/chipElectrician"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/cat_electrician" android:layout_marginEnd="6dp"/>
+        <com.google.android.material.chip.Chip android:id="@+id/chipPlumber"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/cat_plumber" android:layout_marginEnd="6dp"/>
+        <com.google.android.material.chip.Chip android:id="@+id/chipCarpenter"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/cat_carpenter" android:layout_marginEnd="6dp"/>
+        <com.google.android.material.chip.Chip android:id="@+id/chipPainter"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/cat_painter" android:layout_marginEnd="6dp"/>
+        <com.google.android.material.chip.Chip android:id="@+id/chipMechanic"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/cat_mechanic"/>
+      </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Count + progress -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
+      <TextView android:id="@+id/tvCount" android:layout_width="0dp" android:layout_height="wrap_content"
+          android:layout_weight="1" android:textColor="@color/colorTextSecondary" android:textSize="13sp"
+          android:text="Loading…"/>
+      <ProgressBar android:id="@+id/progressBar" android:layout_width="24dp"
+          android:layout_height="24dp" android:visibility="gone"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvEmpty" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="center"
+        android:text="@string/no_workers_found" android:textColor="@color/colorTextSecondary"
+        android:visibility="gone" android:padding="32dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvWorkers"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="8dp" android:clipToPadding="false"/>
+
+  </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
