@@ -57,14 +57,6 @@ The platform enables workers to create digital portfolios, manage services, uplo
 
 ---
 
-# Screenshots
-
-| Login | Worker Dashboard | Customer Browse | Worker Detail |
-|---|---|---|---|
-| *(run app to see)* | *(run app to see)* | *(run app to see)* | *(run app to see)* |
-
----
-
 # Features
 
 ## Authentication & User Management
