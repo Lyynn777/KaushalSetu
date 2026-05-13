@@ -36,8 +36,8 @@ class ProfileCardActivity : BaseActivity() {
             b.cardExp.text = getString(R.string.years_exp, p.yearsOfExperience)
             b.cardRating.text = "★ %.1f  (${p.totalRatings} reviews)".format(p.averageRating)
             b.cardPhone.text = "📞 ${p.phone}"
-            b.cardAvailability.text = if (p.isAvailable) getString(R.string.status_available) else getString(R.string.status_busy)
-            b.cardAvailability.setBackgroundResource(if (p.isAvailable) R.drawable.bg_available else R.drawable.bg_busy)
+            b.cardAvailability.text = if (p.available) getString(R.string.status_available) else getString(R.string.status_busy)
+            b.cardAvailability.setBackgroundResource(if (p.available) R.drawable.bg_available else R.drawable.bg_busy)
             if (p.profileImageUrl.isNotEmpty())
                 Glide.with(this).load(p.profileImageUrl).circleCrop().into(b.cardAvatar)
         }

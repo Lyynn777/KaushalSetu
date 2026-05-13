@@ -103,8 +103,8 @@ class WorkerDashboardActivity : BaseActivity() {
                 b.tvNoPortfolio.visibility = View.GONE
                 b.rvPortfolio.visibility   = View.VISIBLE
             }
-            b.chipAvailability.text = if (p.isAvailable) getString(R.string.status_available) else getString(R.string.status_busy)
-            b.chipAvailability.setChipBackgroundColorResource(if (p.isAvailable) R.color.colorAvailable else R.color.colorBusy)
+            b.chipAvailability.text = if (p.available) getString(R.string.status_available) else getString(R.string.status_busy)
+            b.chipAvailability.setChipBackgroundColorResource(if (p.available) R.color.colorAvailable else R.color.colorBusy)
             if (p.profileImageUrl.isNotEmpty())
                 Glide.with(this).load(p.profileImageUrl).circleCrop().into(b.ivAvatar)
         }

@@ -62,7 +62,7 @@ class WorkerDetailActivity : BaseActivity() {
                 b.tvNoPortfolio.visibility = View.GONE
                 b.rvPortfolio.visibility   = View.VISIBLE
             }
-            b.chipAvailability.text = if (p.isAvailable) getString(R.string.status_available) else getString(R.string.status_busy)
+            b.chipAvailability.text = if (p.available) getString(R.string.status_available) else getString(R.string.status_busy)
             if (p.profileImageUrl.isNotEmpty())
                 Glide.with(this).load(p.profileImageUrl).circleCrop().into(b.ivAvatar)
         }

@@ -48,7 +48,7 @@ class ProfileSetupActivity : BaseActivity() {
             p ?: return@observe
             b.etName.setText(p.name); b.etPhone.setText(p.phone)
             b.etLocation.setText(p.location); b.etExperience.setText(p.yearsOfExperience.toString())
-            b.etBio.setText(p.bio); b.switchAvailable.isChecked = p.isAvailable
+            b.etBio.setText(p.bio); b.switchAvailable.isChecked = p.available
             imageUrl = p.profileImageUrl
             if (p.profileImageUrl.isNotEmpty()) Glide.with(this).load(p.profileImageUrl).circleCrop().into(b.ivAvatar)
             val cats = resources.getStringArray(R.array.skill_categories)
@@ -84,7 +84,7 @@ class ProfileSetupActivity : BaseActivity() {
             location = b.etLocation.text.toString().trim(),
             bio = b.etBio.text.toString().trim(),
             profileImageUrl = imageUrl,
-            isAvailable = b.switchAvailable.isChecked
+            available = b.switchAvailable.isChecked
         ))
     }
 }

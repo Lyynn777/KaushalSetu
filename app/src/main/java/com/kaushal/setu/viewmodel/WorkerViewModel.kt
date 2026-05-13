@@ -118,9 +118,16 @@ class WorkerViewModel : ViewModel() {
     }
 
     fun searchWorkers(category: String = "", location: String = "") = viewModelScope.launch {
+        android.util.Log.d("KaushalSetu", "Searching — category: '$category' location: '$location'")
         repo.searchWorkers(category, location).fold(
-            onSuccess = { _workers.value = it },
-            onFailure = { _ui.value = UiState.Error(it.message ?: "Search failed") }
+            onSuccess = {
+                android.util.Log.d("KaushalSetu", "Search result count: ${it.size}")
+                _workers.value = it
+            },
+            onFailure = {
+                android.util.Log.d("KaushalSetu", "Search failed: ${it.message}")
+                _ui.value = UiState.Error(it.message ?: "Search failed")
+            }
         )
     }
 

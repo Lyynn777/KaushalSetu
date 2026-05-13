@@ -12,6 +12,6 @@ data class WorkerProfile(
     val portfolioImages: List<String> = emptyList(),
     val averageRating: Float = 0f,
     val totalRatings: Int = 0,
-    val isAvailable: Boolean = true,
+    val available: Boolean = true,
     val createdAt: Long = System.currentTimeMillis()
 )

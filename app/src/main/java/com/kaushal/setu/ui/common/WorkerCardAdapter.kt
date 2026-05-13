@@ -26,12 +26,12 @@ class WorkerCardAdapter(
             b.tvLocation.text = w.location
             b.tvExp.text = b.root.context.getString(R.string.years_exp, w.yearsOfExperience)
             b.tvRating.text = "%.1f ★".format(w.averageRating)
-            b.chipStatus.text = if (w.isAvailable)
+            b.chipStatus.text = if (w.available)
                 b.root.context.getString(R.string.status_available)
             else
                 b.root.context.getString(R.string.status_busy)
             b.chipStatus.setChipBackgroundColorResource(
-                if (w.isAvailable) R.color.colorAvailable else R.color.colorBusy
+                if (w.available) R.color.colorAvailable else R.color.colorBusy
             )
             if (w.profileImageUrl.isNotEmpty())
                 Glide.with(b.root).load(w.profileImageUrl).circleCrop().into(b.ivAvatar)

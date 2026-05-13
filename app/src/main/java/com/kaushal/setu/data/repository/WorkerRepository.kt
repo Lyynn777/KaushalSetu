@@ -29,19 +29,26 @@ class WorkerRepository {
     } catch (e: Exception) { Result.failure(e) }
 
     suspend fun getAllWorkers(): Result<List<WorkerProfile>> = try {
-        val snap = db.collection("workers").get().await()
+        val snap = db.collection("workers")
+            .whereEqualTo("available", true)
+            .get().await()
         Result.success(snap.documents.mapNotNull { it.toObject(WorkerProfile::class.java) })
     } catch (e: Exception) { Result.failure(e) }
-
     suspend fun searchWorkers(category: String, location: String): Result<List<WorkerProfile>> = try {
-        var query = db.collection("workers").whereEqualTo("isAvailable", true)
+        android.util.Log.d("KaushalSetu", "Repo searching — category: '$category'")
+        var query = db.collection("workers").whereEqualTo("available", true)
         if (category.isNotBlank()) query = query.whereEqualTo("skillCategory", category)
         val snap = query.get().await()
+        android.util.Log.d("KaushalSetu", "Firestore returned ${snap.documents.size} docs")
         var list = snap.documents.mapNotNull { it.toObject(WorkerProfile::class.java) }
         if (location.isNotBlank())
             list = list.filter { it.location.contains(location, ignoreCase = true) }
+        android.util.Log.d("KaushalSetu", "Final list size: ${list.size}")
         Result.success(list)
-    } catch (e: Exception) { Result.failure(e) }
+    } catch (e: Exception) {
+        android.util.Log.d("KaushalSetu", "Repo search error: ${e.message}")
+        Result.failure(e)
+    }
 
     // ── Images ────────────────────────────────────────────────────────────────
 

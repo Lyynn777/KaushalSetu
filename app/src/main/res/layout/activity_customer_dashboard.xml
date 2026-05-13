@@ -23,15 +23,25 @@
           <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="@string/find_workers" android:textColor="#CCFFFFFF" android:textSize="12sp"/>
         </LinearLayout>
-        <com.google.android.material.button.MaterialButton android:id="@+id/btnLanguage"
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLanguage"
             style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content" android:layout_height="32dp"
-            android:text="@string/lang_toggle" android:textColor="@color/white"
-            android:textSize="12sp" android:textStyle="bold"/>
-        <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/lang_toggle"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
             style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content" android:layout_height="32dp"
-            android:text="@string/logout" android:textColor="#CCFFFFFF" android:textSize="12sp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/logout"
+            android:textColor="#CCFFFFFF"
+            android:textSize="12sp" />
       </LinearLayout>
 
       <com.google.android.material.button.MaterialButton android:id="@+id/btnSearch"
