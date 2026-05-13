@@ -36,6 +36,8 @@ class SplashActivity : BaseActivity() {
                 else -> {}
             }
         }
-        vm.checkSession()
+        window.decorView.postDelayed({
+            vm.checkSession()
+        }, 1500)
     }
 }
