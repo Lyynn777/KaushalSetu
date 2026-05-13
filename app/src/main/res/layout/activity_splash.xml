@@ -13,7 +13,7 @@
         android:layout_height="100dp"
         android:background="#083616"
         android:src="@drawable/ic_launcher_foreground"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@id/tvAppName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
