@@ -14,8 +14,8 @@ import com.kaushal.setu.data.model.WorkerProfile
 import com.kaushal.setu.databinding.ActivityProfileSetupBinding
 import com.kaushal.setu.utils.toast
 import com.kaushal.setu.viewmodel.WorkerViewModel
-
-class ProfileSetupActivity : AppCompatActivity() {
+import com.kaushal.setu.ui.common.BaseActivity
+class ProfileSetupActivity : BaseActivity() {
     private lateinit var b: ActivityProfileSetupBinding
     private val vm: WorkerViewModel by viewModels()
     private val uid get() = FirebaseAuth.getInstance().currentUser?.uid ?: ""

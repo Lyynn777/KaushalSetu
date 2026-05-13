@@ -9,9 +9,9 @@ import com.kaushal.setu.databinding.ActivitySplashBinding
 import com.kaushal.setu.ui.customer.CustomerDashboardActivity
 import com.kaushal.setu.ui.worker.WorkerDashboardActivity
 import com.kaushal.setu.viewmodel.AuthViewModel
-
+import com.kaushal.setu.ui.common.BaseActivity
 @SuppressLint("CustomSplashScreen")
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
     private lateinit var b: ActivitySplashBinding
     private val vm: AuthViewModel by viewModels()
 

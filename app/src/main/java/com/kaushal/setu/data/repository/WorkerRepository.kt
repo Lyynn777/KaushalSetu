@@ -86,6 +86,11 @@ class WorkerRepository {
         Result.success(Unit)
     } catch (e: Exception) { Result.failure(e) }
 
+    suspend fun updateService(service: ServiceCard): Result<Unit> = try {
+        db.collection("workers").document(service.workerUid)
+            .collection("services").document(service.id).set(service).await()
+        Result.success(Unit)
+    } catch (e: Exception) { Result.failure(e) }
     // ── Reviews ───────────────────────────────────────────────────────────────
 
     suspend fun addReview(review: Review): Result<Unit> = try {

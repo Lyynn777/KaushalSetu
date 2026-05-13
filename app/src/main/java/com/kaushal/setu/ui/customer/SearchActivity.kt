@@ -13,8 +13,8 @@ import com.kaushal.setu.ui.common.WorkerCardAdapter
 import com.kaushal.setu.utils.hide
 import com.kaushal.setu.utils.show
 import com.kaushal.setu.viewmodel.WorkerViewModel
-
-class SearchActivity : AppCompatActivity() {
+import com.kaushal.setu.ui.common.BaseActivity
+class SearchActivity : BaseActivity() {
     private lateinit var b: ActivitySearchBinding
     private val vm: WorkerViewModel by viewModels()
     private lateinit var adapter: WorkerCardAdapter

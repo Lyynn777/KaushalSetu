@@ -3,6 +3,7 @@ package com.kaushal.setu.ui.worker
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import com.kaushal.setu.ui.common.BaseActivity
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -21,16 +22,17 @@ import com.kaushal.setu.utils.hide
 import com.kaushal.setu.utils.show
 import com.kaushal.setu.utils.toast
 import com.kaushal.setu.viewmodel.AuthViewModel
+import androidx.recyclerview.widget.GridLayoutManager
 import com.kaushal.setu.viewmodel.WorkerViewModel
-
-class WorkerDashboardActivity : AppCompatActivity() {
+import com.kaushal.setu.ui.common.PortfolioAdapter
+class WorkerDashboardActivity : BaseActivity() {
     private lateinit var b: ActivityWorkerDashboardBinding
     private val vm: WorkerViewModel by viewModels()
     private val authVm: AuthViewModel by viewModels()
     private val uid get() = FirebaseAuth.getInstance().currentUser?.uid ?: ""
     private lateinit var serviceAdapter: ServiceCardAdapter
     private lateinit var requestAdapter: HireRequestAdapter
-
+    private lateinit var portfolioAdapter: PortfolioAdapter
     private val pickPortfolio = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let { vm.uploadPortfolioImage(uid, it) }
     }
@@ -56,17 +58,31 @@ class WorkerDashboardActivity : AppCompatActivity() {
     }
 
     private fun setupAdapters() {
-        serviceAdapter = ServiceCardAdapter(workerView = true, onDelete = { sid ->
-            confirmDialog(getString(R.string.delete_service_title), getString(R.string.delete_service_msg)) {
-                vm.deleteService(uid, sid)
+        serviceAdapter = ServiceCardAdapter(
+            workerView = true,
+            onDelete = { sid ->
+                confirmDialog(
+                    getString(R.string.delete_service_title),
+                    getString(R.string.delete_service_msg)
+                ) { vm.deleteService(uid, sid) }
+            },
+            onEdit = { service ->
+                startActivity(
+                    Intent(this, AddServiceActivity::class.java)
+                        .putExtra("SERVICE_TO_EDIT", service)
+                )
             }
-        })
+        )
         b.rvServices.layoutManager = LinearLayoutManager(this)
         b.rvServices.adapter = serviceAdapter
 
         requestAdapter = HireRequestAdapter { rid, status -> vm.updateRequestStatus(rid, status) }
         b.rvRequests.layoutManager = LinearLayoutManager(this)
         b.rvRequests.adapter = requestAdapter
+
+        portfolioAdapter = PortfolioAdapter()
+        b.rvPortfolio.layoutManager = GridLayoutManager(this, 3)
+        b.rvPortfolio.adapter = portfolioAdapter
     }
 
     private fun setupObservers() {
@@ -78,6 +94,15 @@ class WorkerDashboardActivity : AppCompatActivity() {
             b.tvExp.text = getString(R.string.years_exp, p.yearsOfExperience)
             b.tvRating.text = String.format("%.1f ★", p.averageRating)
             b.tvPortfolioCount.text = getString(R.string.photos_count, p.portfolioImages.size)
+            b.tvPortfolioCount.text = getString(R.string.photos_count, p.portfolioImages.size)
+            portfolioAdapter.submitList(p.portfolioImages)
+            if (p.portfolioImages.isEmpty()) {
+                b.tvNoPortfolio.visibility = View.VISIBLE
+                b.rvPortfolio.visibility   = View.GONE
+            } else {
+                b.tvNoPortfolio.visibility = View.GONE
+                b.rvPortfolio.visibility   = View.VISIBLE
+            }
             b.chipAvailability.text = if (p.isAvailable) getString(R.string.status_available) else getString(R.string.status_busy)
             b.chipAvailability.setChipBackgroundColorResource(if (p.isAvailable) R.color.colorAvailable else R.color.colorBusy)
             if (p.profileImageUrl.isNotEmpty())

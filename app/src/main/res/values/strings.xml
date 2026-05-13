@@ -106,6 +106,7 @@
     <string name="review_form_title">Write a Review</string>
     <string name="your_comment">Your comment (Optional)</string>
     <string name="btn_submit_review">Submit Review</string>
+    <string name="btn_update_service">Update Service</string>
 
     <!-- Hire request item -->
     <string name="status_pending">Pending</string>

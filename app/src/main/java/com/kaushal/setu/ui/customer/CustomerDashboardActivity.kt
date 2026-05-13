@@ -16,8 +16,8 @@ import com.kaushal.setu.utils.hide
 import com.kaushal.setu.utils.show
 import com.kaushal.setu.viewmodel.AuthViewModel
 import com.kaushal.setu.viewmodel.WorkerViewModel
-
-class CustomerDashboardActivity : AppCompatActivity() {
+import com.kaushal.setu.ui.common.BaseActivity
+class CustomerDashboardActivity : BaseActivity() {
     private lateinit var b: ActivityCustomerDashboardBinding
     private val vm: WorkerViewModel by viewModels()
     private val authVm: AuthViewModel by viewModels()

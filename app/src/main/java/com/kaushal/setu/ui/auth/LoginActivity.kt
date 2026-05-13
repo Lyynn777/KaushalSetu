@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import com.kaushal.setu.ui.common.BaseActivity
 import androidx.appcompat.app.AppCompatActivity
 import com.kaushal.setu.databinding.ActivityLoginBinding
 import com.kaushal.setu.ui.customer.CustomerDashboardActivity
@@ -11,7 +12,7 @@ import com.kaushal.setu.ui.worker.WorkerDashboardActivity
 import com.kaushal.setu.utils.toast
 import com.kaushal.setu.viewmodel.AuthViewModel
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
     private lateinit var b: ActivityLoginBinding
     private val vm: AuthViewModel by viewModels()
 

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import com.kaushal.setu.ui.common.BaseActivity
 import androidx.appcompat.app.AppCompatActivity
 import com.kaushal.setu.R
 import com.kaushal.setu.databinding.ActivityRegisterBinding
@@ -12,7 +13,7 @@ import com.kaushal.setu.ui.worker.WorkerDashboardActivity
 import com.kaushal.setu.utils.toast
 import com.kaushal.setu.viewmodel.AuthViewModel
 
-class RegisterActivity : AppCompatActivity() {
+class RegisterActivity : BaseActivity() {
     private lateinit var b: ActivityRegisterBinding
     private val vm: AuthViewModel by viewModels()
 

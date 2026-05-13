@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.kaushal.setu.databinding.ActivityLanguageSettingsBinding
 import com.kaushal.setu.ui.auth.SplashActivity
 import com.kaushal.setu.utils.LocaleHelper
-
-class LanguageSettingsActivity : AppCompatActivity() {
+import com.kaushal.setu.ui.common.BaseActivity
+class LanguageSettingsActivity : BaseActivity() {
     private lateinit var b: ActivityLanguageSettingsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

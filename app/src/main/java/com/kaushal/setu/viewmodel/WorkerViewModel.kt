@@ -97,7 +97,18 @@ class WorkerViewModel : ViewModel() {
             onFailure = { _ui.value = UiState.Error(it.message ?: "Failed") }
         )
     }
-
+    fun updateService(service: ServiceCard) {
+        _ui.value = UiState.Loading
+        viewModelScope.launch {
+            repo.updateService(service).fold(
+                onSuccess = {
+                    _ui.value = UiState.Success("Service updated")
+                    loadServices(service.workerUid)
+                },
+                onFailure = { _ui.value = UiState.Error(it.message ?: "Failed to update") }
+            )
+        }
+    }
     // ── Workers (customer view) ────────────────────────────────────────────────
     fun loadAllWorkers() = viewModelScope.launch {
         repo.getAllWorkers().fold(

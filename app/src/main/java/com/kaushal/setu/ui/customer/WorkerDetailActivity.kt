@@ -18,8 +18,10 @@ import com.kaushal.setu.utils.show
 import com.kaushal.setu.utils.toast
 import com.kaushal.setu.viewmodel.AuthViewModel
 import com.kaushal.setu.viewmodel.WorkerViewModel
-
-class WorkerDetailActivity : AppCompatActivity() {
+import com.kaushal.setu.ui.common.BaseActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import com.kaushal.setu.ui.common.PortfolioAdapter
+class WorkerDetailActivity : BaseActivity() {
     private lateinit var b: ActivityWorkerDetailBinding
     private val vm: WorkerViewModel by viewModels()
     private val authVm: AuthViewModel by viewModels()
@@ -38,6 +40,10 @@ class WorkerDetailActivity : AppCompatActivity() {
         val revAdapter = ReviewAdapter()
         b.rvReviews.layoutManager = LinearLayoutManager(this); b.rvReviews.adapter = revAdapter
 
+        val portfolioAdapter = PortfolioAdapter()
+        b.rvPortfolio.layoutManager = GridLayoutManager(this, 3)
+        b.rvPortfolio.adapter = portfolioAdapter
+
         vm.profile.observe(this) { p ->
             p ?: return@observe
             b.tvName.text = p.name; b.tvCategory.text = p.skillCategory
@@ -47,6 +53,15 @@ class WorkerDetailActivity : AppCompatActivity() {
             b.tvRating.text = "%.1f".format(p.averageRating)
             b.tvRatingCount.text = "(${p.totalRatings})"
             b.tvPortfolioCount.text = getString(R.string.portfolio_count, p.portfolioImages.size)
+            b.tvPortfolioCount.text = getString(R.string.portfolio_count, p.portfolioImages.size)
+            portfolioAdapter.submitList(p.portfolioImages)
+            if (p.portfolioImages.isEmpty()) {
+                b.tvNoPortfolio.visibility = View.VISIBLE
+                b.rvPortfolio.visibility   = View.GONE
+            } else {
+                b.tvNoPortfolio.visibility = View.GONE
+                b.rvPortfolio.visibility   = View.VISIBLE
+            }
             b.chipAvailability.text = if (p.isAvailable) getString(R.string.status_available) else getString(R.string.status_busy)
             if (p.profileImageUrl.isNotEmpty())
                 Glide.with(this).load(p.profileImageUrl).circleCrop().into(b.ivAvatar)

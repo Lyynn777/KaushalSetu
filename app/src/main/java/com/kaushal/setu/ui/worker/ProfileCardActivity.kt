@@ -16,8 +16,8 @@ import com.kaushal.setu.databinding.ActivityProfileCardBinding
 import com.kaushal.setu.viewmodel.WorkerViewModel
 import java.io.File
 import java.io.FileOutputStream
-
-class ProfileCardActivity : AppCompatActivity() {
+import com.kaushal.setu.ui.common.BaseActivity
+class ProfileCardActivity : BaseActivity() {
     private lateinit var b: ActivityProfileCardBinding
     private val vm: WorkerViewModel by viewModels()
     private val uid get() = FirebaseAuth.getInstance().currentUser?.uid ?: ""

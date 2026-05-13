@@ -67,6 +67,7 @@
     <string name="btn_generate_ai">✨ AI ಯಿಂದ ರಚಿಸಿ</string>
     <string name="btn_add_service">ಸೇವೆ ಸೇರಿಸಿ</string>
     <string name="service_available">ಸೇವೆ ಲಭ್ಯವಿದೆ</string>
+    <string name="btn_update_service">ಸೇವೆ ನವೀಕರಿಸಿ</string>
 
     <!-- Customer Dashboard -->
     <string name="find_workers">ಕುಶಲಕರ್ಮಿಗಳನ್ನು ಹುಡುಕಿ</string>
