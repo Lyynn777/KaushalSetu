@@ -78,13 +78,17 @@
                   android:textColor="@color/colorAccent" android:textSize="12sp"
                   android:textStyle="bold"/>
             </LinearLayout>
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipAvailability"
-                android:layout_width="wrap_content" android:layout_height="28dp"
-                android:text="Available" android:textColor="@color/white"
-                android:textSize="11sp" android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginTop="6dp"
+                android:text="Available"
+                android:textColor="@color/white"
+                android:textSize="11sp"
                 app:chipBackgroundColor="@color/colorAvailable"
-                app:chipMinHeight="28dp"/>
+                app:chipMinHeight="34dp" />
           </LinearLayout>
 
           <!-- Edit profile button aligned to top right -->

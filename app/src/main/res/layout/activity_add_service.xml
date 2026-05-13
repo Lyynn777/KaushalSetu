@@ -47,13 +47,14 @@
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="@string/ai_title" android:textColor="@color/colorTextPrimary"
             android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilDescription"
             style="@style/SetuTextInput" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:hint="@string/experience_for_ai"
-            android:layout_marginBottom="8dp">
-          <com.google.android.material.textfield.TextInputEditText android:id="@+id/etExperience"
+            android:layout_height="wrap_content" android:hint="@string/service_description"
+            android:layout_marginBottom="12dp">
+          <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDescription"
               android:layout_width="match_parent" android:layout_height="wrap_content"
-              android:inputType="number" android:textColor="@color/colorTextPrimary"/>
+              android:minLines="4" android:gravity="top" android:inputType="textMultiLine"
+              android:textColor="@color/colorTextPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.button.MaterialButton android:id="@+id/btnGenerate"
             style="@style/SetuButtonOutlined" android:layout_width="match_parent"
@@ -62,14 +63,13 @@
       </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilDescription"
+    <com.google.android.material.textfield.TextInputLayout
         style="@style/SetuTextInput" android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:hint="@string/service_description"
-        android:layout_marginBottom="12dp">
-      <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDescription"
+        android:layout_height="wrap_content" android:hint="@string/experience_for_ai"
+        android:layout_marginBottom="8dp">
+      <com.google.android.material.textfield.TextInputEditText android:id="@+id/etExperience"
           android:layout_width="match_parent" android:layout_height="wrap_content"
-          android:minLines="4" android:gravity="top" android:inputType="textMultiLine"
-          android:textColor="@color/colorTextPrimary"/>
+          android:inputType="number" android:textColor="@color/colorTextPrimary"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
