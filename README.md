@@ -110,26 +110,26 @@ The platform enables workers to create digital portfolios, manage services, uplo
 ```
 app/src/main/
 ├── java/com/kaushal/setu/
-│   ├── KaushalSetuApp.kt               ← Application class (locale init)
+│   ├── KaushalSetuApp.kt               
 │   ├── data/
-│   │   ├── model/                      ← User, WorkerProfile, ServiceCard, Review, HireRequest
-│   │   └── repository/                 ← AuthRepository, WorkerRepository, GeminiRepository
-│   ├── viewmodel/                      ← AuthViewModel, WorkerViewModel
+│   │   ├── model/                      
+│   │   └── repository/                 
+│   ├── viewmodel/                      
 │   ├── ui/
-│   │   ├── auth/                       ← SplashActivity, LoginActivity, RegisterActivity
-│   │   ├── worker/                     ← WorkerDashboardActivity, ProfileSetupActivity,
-│   │   │                                  AddServiceActivity, ProfileCardActivity
-│   │   ├── customer/                   ← CustomerDashboardActivity, SearchActivity,
-│   │   │                                  WorkerDetailActivity
-│   │   └── common/                     ← LanguageSettingsActivity, all Adapters
-│   └── utils/                          ← LocaleHelper, Extensions
+│   │   ├── auth/                       
+│   │   ├── worker/                     
+│   │   │                               
+│   │   ├── customer/                   
+│   │   │                               
+│   │   └── common/                     
+│   └── utils/                          
 └── res/
-    ├── layout/                         ← 11 activity + 4 item layouts
-    ├── drawable/                       ← shapes, icons, backgrounds
-    ├── color/                          ← input stroke color states
-    ├── values/                         ← colors, strings (English), themes, dimens
-    ├── values-kn/                      ← strings (Kannada)
-    └── xml/                            ← file_paths, backup_rules
+    ├── layout/                         
+    ├── drawable/                       
+    ├── color/                          
+    ├── values/                         
+    ├── values-kn/                      
+    └── xml/                            
 ```
 ---
 
