@@ -148,4 +148,13 @@ class WorkerRepository {
         db.collection("hire_requests").document(requestId).update("status", status).await()
         Result.success(Unit)
     } catch (e: Exception) { Result.failure(e) }
+
+    suspend fun getCustomerRequests(customerUid: String): Result<List<HireRequest>> = try {
+        val snap = db.collection("hire_requests")
+            .whereEqualTo("customerUid", customerUid)
+            .get().await()
+        val list = snap.documents.mapNotNull { it.toObject(HireRequest::class.java) }
+            .sortedByDescending { it.createdAt }
+        Result.success(list)
+    } catch (e: Exception) { Result.failure(e) }
 }

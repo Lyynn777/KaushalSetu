@@ -28,6 +28,8 @@ class WorkerViewModel : ViewModel() {
 
     private val _requests    = MutableLiveData<List<HireRequest>>()
     val requests: LiveData<List<HireRequest>> = _requests
+    private val _customerRequests = MutableLiveData<List<HireRequest>>()
+    val customerRequests: LiveData<List<HireRequest>> = _customerRequests
 
     private val _aiText      = MutableLiveData<String>()
     val aiText: LiveData<String> = _aiText
@@ -150,7 +152,12 @@ class WorkerViewModel : ViewModel() {
     fun loadRequests(uid: String) = viewModelScope.launch {
         repo.getHireRequests(uid).fold(onSuccess = { _requests.value = it }, onFailure = {})
     }
-
+    fun loadCustomerRequests(uid: String) = viewModelScope.launch {
+        repo.getCustomerRequests(uid).fold(
+            onSuccess = { _customerRequests.value = it },
+            onFailure = { _ui.value = UiState.Error(it.message ?: "Failed to load requests") }
+        )
+    }
     fun sendHireRequest(r: HireRequest) {
         _ui.value = UiState.Loading
         viewModelScope.launch {

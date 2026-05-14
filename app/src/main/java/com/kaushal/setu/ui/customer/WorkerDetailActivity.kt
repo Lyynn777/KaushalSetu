@@ -107,14 +107,18 @@ class WorkerDetailActivity : BaseActivity() {
         b.btnSendRequest.setOnClickListener {
             val name  = b.etYourName.text.toString().trim()
             val phone = b.etYourPhone.text.toString().trim()
-            if (name.isEmpty() || phone.isEmpty()) { toast(getString(R.string.error_required)); return@setOnClickListener }
+            if (name.isEmpty() || phone.isEmpty()) {
+                toast(getString(R.string.error_required))
+                return@setOnClickListener
+            }
             vm.sendHireRequest(HireRequest(
-                workerUid    = workerUid,
-                customerUid  = currentUid,
-                customerName = name,
-                customerPhone= phone,
-                serviceName  = b.etServiceNeeded.text.toString().trim(),
-                message      = b.etMessage.text.toString().trim()
+                workerUid     = workerUid,
+                workerName    = b.tvName.text.toString(),   // ← add this line
+                customerUid   = currentUid,
+                customerName  = name,
+                customerPhone = phone,
+                serviceName   = b.etServiceNeeded.text.toString().trim(),
+                message       = b.etMessage.text.toString().trim()
             ))
         }
 

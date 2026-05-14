@@ -45,7 +45,7 @@
         <activity android:name=".ui.customer.CustomerDashboardActivity" android:exported="false" />
         <activity android:name=".ui.customer.SearchActivity"            android:exported="false" />
         <activity android:name=".ui.customer.WorkerDetailActivity"      android:exported="false" />
-
+        <activity android:name=".ui.customer.HireRequestHistoryActivity" android:exported="false"/>
         <!-- ── Shared ─────────────────────────────────────────── -->
         <activity android:name=".ui.common.LanguageSettingsActivity" android:exported="false" />
 

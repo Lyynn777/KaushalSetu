@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.kaushal.setu.ui.customer.HireRequestHistoryActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kaushal.setu.R
 import com.kaushal.setu.databinding.ActivityCustomerDashboardBinding
@@ -60,7 +61,9 @@ class CustomerDashboardActivity : BaseActivity() {
         b.btnLanguage.setOnClickListener { startActivity(Intent(this, LanguageSettingsActivity::class.java)) }
         b.btnLogout.setOnClickListener   { confirmDialog(getString(R.string.logout_confirm_title), getString(R.string.logout_confirm_msg), getString(R.string.logout)) { authVm.logout() } }
         b.swipeRefresh.setOnRefreshListener { vm.loadAllWorkers(); b.swipeRefresh.isRefreshing = false }
-
+        b.btnMyRequests.setOnClickListener {
+            startActivity(Intent(this, HireRequestHistoryActivity::class.java))
+        }
         vm.loadAllWorkers()
     }
 

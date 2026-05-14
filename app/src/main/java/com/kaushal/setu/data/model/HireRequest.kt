@@ -3,6 +3,7 @@ package com.kaushal.setu.data.model
 data class HireRequest(
     val id: String = "",
     val workerUid: String = "",
+    val workerName: String = "",
     val customerUid: String = "",
     val customerName: String = "",
     val customerPhone: String = "",
