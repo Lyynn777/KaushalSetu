@@ -9,7 +9,7 @@
 ![Architecture](https://img.shields.io/badge/Architecture-MVVM-blue)
 ![Backend](https://img.shields.io/badge/Backend-Firebase-orange)
 ![AI](https://img.shields.io/badge/AI-Gemini-yellow)
-![Status](https://img.shields.io/badge/Version-v1.3.3-success)
+![Status](https://img.shields.io/badge/Version-v1.4.1-success)
 
 KaushalSetu is a hyperlocal skilled worker discovery platform designed to connect local service providers with customers in Karnataka, India.  
 The platform helps electricians, plumbers, carpenters, painters, mechanics, and other skilled workers build professional digital identities while enabling customers to easily discover trusted local services.
@@ -146,22 +146,6 @@ app/src/main/
 - Kannada / English Localization
 - Shareable Profile Card Generation
 - Improved UX and profile handling refinements
-
----
-
-# Sample Test Accounts
-
-## Worker Account
-- **Name:** Ravi Kumar  
-- **Phone:** 9876543210  
-- **Email:** ravi@test.com  
-- **Password:** ravi1234  
-
-## Customer Account
-- **Name:** Priya Sharma  
-- **Phone:** 9845012345  
-- **Email:** priya@test.com  
-- **Password:** priya1234  
 
 ---
 
