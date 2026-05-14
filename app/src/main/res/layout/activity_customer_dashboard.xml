@@ -9,19 +9,40 @@
       android:orientation="vertical" android:background="@color/colorBackground">
 
     <!-- App bar -->
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:background="@color/colorPrimary" android:orientation="vertical" android:padding="14dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:padding="14dp">
 
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-          android:orientation="horizontal" android:gravity="center_vertical"
-          android:layout_marginBottom="10dp">
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-            android:layout_weight="1" android:orientation="vertical">
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:text="@string/app_name" android:textColor="@color/white"
-              android:textSize="18sp" android:textStyle="bold"/>
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:text="@string/find_workers" android:textColor="#CCFFFFFF" android:textSize="12sp"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/app_name"
+              android:textColor="@color/white"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/find_workers"
+              android:textColor="#CCFFFFFF"
+              android:textSize="12sp" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -29,10 +50,15 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:text="@string/lang_toggle"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            app:cornerRadius="6dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogout"
@@ -41,24 +67,33 @@
             android:layout_height="40dp"
             android:text="@string/logout"
             android:textColor="#CCFFFFFF"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="1dp" />
       </LinearLayout>
 
       <com.google.android.material.button.MaterialButton
           android:id="@+id/btnMyRequests"
           style="@style/Widget.MaterialComponents.Button.TextButton"
           android:layout_width="wrap_content"
-          android:layout_height="32dp"
+          android:layout_height="33dp"
           android:text="My Requests"
           android:textColor="@color/white"
-          android:textSize="11sp"/>
+          android:textSize="11sp"
+          app:strokeColor="#FFFFFF"
+          app:strokeWidth="1dp" />
 
-      <com.google.android.material.button.MaterialButton android:id="@+id/btnSearch"
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnSearch"
           style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-          android:layout_width="match_parent" android:layout_height="44dp"
-          android:text="@string/search_hint" android:textColor="@color/white"
-          app:strokeColor="@color/white" app:cornerRadius="22dp"
-          android:gravity="start|center_vertical" android:paddingStart="16dp"/>
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="start|center_vertical"
+          android:paddingStart="16dp"
+          android:text="@string/search_hint"
+          android:textColor="@color/white"
+          app:cornerRadius="22dp"
+          app:strokeColor="@color/white" />
     </LinearLayout>
 
     <!-- Category chips -->
