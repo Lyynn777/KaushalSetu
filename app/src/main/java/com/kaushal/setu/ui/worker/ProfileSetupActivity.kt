@@ -14,10 +14,12 @@ import com.kaushal.setu.data.model.WorkerProfile
 import com.kaushal.setu.databinding.ActivityProfileSetupBinding
 import com.kaushal.setu.utils.toast
 import com.kaushal.setu.viewmodel.WorkerViewModel
+import com.kaushal.setu.viewmodel.AuthViewModel
 import com.kaushal.setu.ui.common.BaseActivity
 class ProfileSetupActivity : BaseActivity() {
     private lateinit var b: ActivityProfileSetupBinding
     private val vm: WorkerViewModel by viewModels()
+    private val authVm: AuthViewModel by viewModels()
     private val uid get() = FirebaseAuth.getInstance().currentUser?.uid ?: ""
     private var imageUrl = ""
     private var pendingUri: Uri? = null
@@ -36,6 +38,7 @@ class ProfileSetupActivity : BaseActivity() {
         b.btnBack.setOnClickListener { finish() }
         b.btnSave.setOnClickListener { if (validate()) { if (pendingUri != null) vm.uploadProfileImage(uid, pendingUri!!) else save() } }
         vm.loadProfile(uid)
+        authVm.checkSession()
     }
 
     private fun setupSpinner() {
@@ -44,6 +47,13 @@ class ProfileSetupActivity : BaseActivity() {
     }
 
     private fun setupObservers() {
+            // Pre-fill name and phone from registration if profile is new
+            authVm.user.observe(this) { user ->
+                user ?: return@observe
+                // Only fill if currently empty — don't overwrite existing profile data
+                if (b.etName.text.isNullOrBlank()) b.etName.setText(user.name)
+                if (b.etPhone.text.isNullOrBlank()) b.etPhone.setText(user.phone)
+            }
         vm.profile.observe(this) { p ->
             p ?: return@observe
             b.etName.setText(p.name); b.etPhone.setText(p.phone)

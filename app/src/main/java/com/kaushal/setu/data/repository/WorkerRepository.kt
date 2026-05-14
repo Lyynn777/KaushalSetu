@@ -56,18 +56,28 @@ class WorkerRepository {
         val ref = storage.reference.child("profiles/$uid.jpg")
         ref.putFile(uri).await()
         val url = ref.downloadUrl.await().toString()
-        db.collection("workers").document(uid).update("profileImageUrl", url).await()
+
+        // Just update the single field — don't touch anything else
+        db.collection("workers").document(uid)
+            .update("profileImageUrl", url)
+            .await()
+
         Result.success(url)
     } catch (e: Exception) { Result.failure(e) }
 
     suspend fun uploadPortfolioImage(uid: String, uri: Uri): Result<String> = try {
+        // Step 1 — upload image to Firebase Storage
         val ref = storage.reference.child("portfolio/$uid/${UUID.randomUUID()}.jpg")
         ref.putFile(uri).await()
         val url = ref.downloadUrl.await().toString()
-        val current = db.collection("workers").document(uid).get().await()
-            .toObject(WorkerProfile::class.java)
-        val updated = (current?.portfolioImages ?: emptyList()).toMutableList().apply { add(url) }
-        db.collection("workers").document(uid).update("portfolioImages", updated).await()
+
+        // Step 2 — atomically add URL to array in Firestore
+        // FieldValue.arrayUnion adds to the array without reading it first
+        // This means existing photos can never be accidentally wiped
+        db.collection("workers").document(uid)
+            .update("portfolioImages", com.google.firebase.firestore.FieldValue.arrayUnion(url))
+            .await()
+
         Result.success(url)
     } catch (e: Exception) { Result.failure(e) }
 
