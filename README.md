@@ -11,34 +11,6 @@
 [![AI](https://img.shields.io/badge/AI-Gemini%201.5%20Flash-purple.svg)](https://aistudio.google.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Status](https://img.shields.io/badge/Version-v1.4.1-success)
- 
----
- 
-## 📱 Demo
-
-> 📥 **Download APK:** [KaushalSetu-v1.0.apk](https://drive.google.com/file/d/110b8qwvfI0gyb-qBa_I8UbvScHBZyM8X/view?usp=sharing)
-
-> 🚀 **GitHub Release:** [KaushalSetu v1.4.1](../../releases/latest)
- 
-## 📸 Screenshots
- 
-<table>
-<tr>
-<th>Login</th>
-<th>Worker Dashboard(1)</th>
-<th>Worker Dashboard(2)</th>
-<th>Customer Browse</th>
-<th>Profile Card</th>
-</tr>
-
-<tr>
-<td><img src="screenshots/login.jpeg" width="180"></td>
-<td><img src="screenshots/workerdashboard1.jpeg" width="180"></td>
-<td><img src="screenshots/workerdashboard2.jpeg" width="180"></td>
-<td><img src="screenshots/customerdashboard.jpeg" width="180"></td>
-<td><img src="screenshots/profilecard.jpeg" width="180"></td>
-</tr>
-</table>
 
 ---
  
@@ -136,7 +108,27 @@ KaushalSetu/
 ├── settings.gradle
 └── README.md
 ```
+---
+## 📸 Screenshots
  
+<table>
+<tr>
+<th>Login</th>
+<th>Worker Dashboard(1)</th>
+<th>Worker Dashboard(2)</th>
+<th>Customer Browse</th>
+<th>Profile Card</th>
+</tr>
+
+<tr>
+<td><img src="screenshots/login.jpeg" width="180"></td>
+<td><img src="screenshots/workerdashboard1.jpeg" width="180"></td>
+<td><img src="screenshots/workerdashboard2.jpeg" width="180"></td>
+<td><img src="screenshots/customerdashboard.jpeg" width="180"></td>
+<td><img src="screenshots/profilecard.jpeg" width="180"></td>
+</tr>
+</table>
+
 ---
  
 ## 🚀 Setup and Installation
@@ -206,6 +198,12 @@ Get a free Gemini API key from [aistudio.google.com/app/apikey](https://aistudio
 1. Open **Android Studio** → **File → Open** → select the `KaushalSetu` folder
 2. Wait for Gradle sync to complete (2–5 minutes first time)
 3. Run on emulator or physical device ▶
+---
+ ## 📱 Demo
+
+> 📥 **Download APK:** [KaushalSetu-v1.0.apk](https://drive.google.com/file/d/110b8qwvfI0gyb-qBa_I8UbvScHBZyM8X/view?usp=sharing)
+
+> 🚀 **GitHub Release:** [KaushalSetu v1.4.1](../../releases/latest)
 ---
  
 ## 🗄️ Database Schema (Firestore)
