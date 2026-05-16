@@ -201,7 +201,7 @@ Get a free Gemini API key from [aistudio.google.com/app/apikey](https://aistudio
 ---
  ## 📱 Demo
 
-> 📥 **Download APK:** [KaushalSetu-v1.0.apk](https://drive.google.com/file/d/110b8qwvfI0gyb-qBa_I8UbvScHBZyM8X/view?usp=sharing)
+> 📥 **Download APK:** [KaushalSetu-v1.4.1apk](https://drive.google.com/file/d/110b8qwvfI0gyb-qBa_I8UbvScHBZyM8X/view?usp=sharing)
 
 > 🚀 **GitHub Release:** [KaushalSetu v1.4.1](../../releases/latest)
 ---
